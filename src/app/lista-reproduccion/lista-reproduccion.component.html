@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>LISTAS DE REPRODUCCION</h1>
+<table class="table table-dark table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let listaItera of listaReproduccion">
+        <td>{{ listaItera.nombre }}</td>
+        <td>{{ listaItera.descripcion }}</td>
+        <td>
+            <button class="btn btn-info" type="button" [routerLink]="[listaItera.idLista,'canciones']">Ver Canciones</button>
+            <button class="btn btn-danger" type="button" (click)="delete(listaItera)">Eliminar</button>
+            <button class="btn btn-secondary" type="button">Agregar Canciones</button>
+        </td>
+      </tr>
+    </tbody>
+    <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-success" type="button" [routerLink]="['/listaReproduccion/agregar']">Agregar Lista de Reproduccion</button>
+    </div>
+  </table>
+</div>

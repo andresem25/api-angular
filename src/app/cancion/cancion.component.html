@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Canciones</h1>
+<table class="table table-dark table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Titulo</th>
+        <th scope="col">Artista</th>
+        <th scope="col">Año</th>
+        <th scope="col">Album</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let listaItera of listaCanciones">
+        <td>{{ listaItera.titulo }}</td>
+        <td>{{ listaItera.artista }}</td>
+        <td>{{ listaItera.anno }}</td>
+        <td>{{ listaItera.album }}</td>
+        <td>{{ listaItera.genero }}</td>
+        <td>
+            <button class="btn btn-danger" type="button" (click)="delete(listaItera)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+    <div>
+        <button class="btn btn-success" type="button" [routerLink]="['/cancion/agregar']">Agregar Canciones</button>
+    </div>
+  </table>
+</div>

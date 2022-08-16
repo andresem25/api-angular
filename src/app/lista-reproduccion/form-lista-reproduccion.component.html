@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>AGREGAR LISTA DE REPRODUCCION</h2>
+<form>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre de la lista</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="listaReproduccion.nombre">
+    </div>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion Lista de reproduccion</label>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="listaReproduccion.descripcion">
+      </div>
+    <button class="btn btn-primary" role="button" (click)='create()'>Guardar</button>
+  </form>
+</div>

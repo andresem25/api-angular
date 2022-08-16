@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>AGREGAR Canciones</h2>
+<form>
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Titulo</label>
+      <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="cancion.titulo">
+    </div>
+    <div class="mb-3">
+        <label for="artista" class="form-label">Artista</label>
+        <input type="text" class="form-control" id="artista" name="artista" [(ngModel)]="cancion.artista">
+    </div>
+    <div class="mb-3">
+        <label for="album" class="form-label">Album</label>
+        <input type="text" class="form-control" id="album" name="album" [(ngModel)]="cancion.album">
+    </div>
+    <div class="mb-3">
+        <label for="anno" class="form-label">Año</label>
+        <input type="text" class="form-control" id="anno" name="anno" [(ngModel)]="cancion.anno">
+    </div>
+    <div class="mb-3">
+        <label for="genero" class="form-label">Genero</label>
+        <input type="text" class="form-control" id="genero" name="genero" [(ngModel)]="cancion.genero">
+    </div>
+    <button class="btn btn-primary" role="button" (click)='create()'>Guardar</button>
+  </form>
+</div>
